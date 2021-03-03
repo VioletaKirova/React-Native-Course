@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 const GoalItem = (props) => {
   const { id, title, onItemPressed } = props;
@@ -19,7 +19,7 @@ const GoalItem = (props) => {
 const styles = StyleSheet.create({
   listItem: {
     borderRadius: 5,
-    backgroundColor: "#f7f7f7",
+    backgroundColor: '#f7f7f7',
     elevation: 5,
     padding: 10,
     marginHorizontal: 2,

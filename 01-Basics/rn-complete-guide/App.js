@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { StyleSheet, View, FlatList, Button } from "react-native";
-import GoalItem from "./components/GoalItem";
-import GoalInput from "./components/GoalInput";
+import React, { useState } from 'react';
+import { StyleSheet, View, FlatList, Button } from 'react-native';
+import GoalItem from './components/GoalItem';
+import GoalInput from './components/GoalInput';
 
 export default function App() {
   const [goals, setGoals] = useState([]);
@@ -28,7 +28,7 @@ export default function App() {
   return (
     <View style={styles.layout}>
       <View style={styles.buttonWrapper}>
-        <Button title="Add your goal" onPress={() => setAddMode(true)} />
+        <Button title='Add your goal' onPress={() => setAddMode(true)} />
       </View>
       <GoalInput
         shouldShowModal={addMode}
@@ -53,15 +53,15 @@ export default function App() {
 
 const styles = StyleSheet.create({
   layout: {
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
     paddingVertical: 40,
     paddingHorizontal: 20,
   },
   buttonWrapper: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    width: "100%",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
   },
   goalList: {
     marginTop: 10,

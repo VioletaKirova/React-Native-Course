@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { StyleSheet, View, TextInput, Button, Modal } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, View, TextInput, Button, Modal } from 'react-native';
 
 const GoalInput = (props) => {
-  const [goal, setGoal] = useState("");
+  const [goal, setGoal] = useState('');
 
   const onChangeTextHandler = (textInput) => {
     setGoal(textInput);
@@ -10,7 +10,7 @@ const GoalInput = (props) => {
 
   const onAddPressed = () => {
     props.onAddButtonPressed(goal);
-    setGoal("");
+    setGoal('');
   };
 
   const onCancelPressed = () => {
@@ -18,19 +18,19 @@ const GoalInput = (props) => {
   };
 
   return (
-    <Modal visible={props.shouldShowModal} animationType="slide">
+    <Modal visible={props.shouldShowModal} animationType='slide'>
       <View style={styles.layout}>
         <View style={styles.main}>
           <TextInput
             value={goal.value}
             onChangeText={onChangeTextHandler}
-            placeholder="Enter your goal..."
+            placeholder='Enter your goal...'
             style={styles.input}
           />
-          <Button onPress={onAddPressed} title="Add" style={styles.addBtn} />
+          <Button onPress={onAddPressed} title='Add' style={styles.addBtn} />
         </View>
         <View style={styles.footer}>
-          <Button onPress={onCancelPressed} title="Cancel" color="grey" />
+          <Button onPress={onCancelPressed} title='Cancel' color='grey' />
         </View>
       </View>
     </Modal>
@@ -43,27 +43,27 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   main: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
   footer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     paddingTop: 20,
   },
   input: {
-    width: "80%",
+    width: '80%',
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderLeftWidth: 1,
     borderRightWidth: 1,
-    borderColor: "#C7CBCB",
+    borderColor: '#C7CBCB',
     borderRadius: 5,
     padding: 10,
   },
   addBtn: {
-    width: "20%",
+    width: '20%',
   },
 });
 
